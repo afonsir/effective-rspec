@@ -10,8 +10,14 @@ class Coffee
   end
 
   def price
-    ingredients.include?(:milk) ? 1.25 : 1.00
+    1.00 + ingredients.size * 0.25
   end
+end
+
+# rspec --only-failures
+
+RSpec.configure do |config|
+  config.example_status_persistence_file_path = 'spec/examples.txt'
 end
 
 RSpec.describe 'A cup of coffee' do
