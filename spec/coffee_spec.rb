@@ -14,9 +14,10 @@ class Coffee
   end
 end
 
-# rspec --only-failures
+# rspec --only-failures | rspec --tag focus, rspec --tag last_run_status:failed
 
 RSpec.configure do |config|
+  config.filter_run_when_matching(focus: true)
   config.example_status_persistence_file_path = 'spec/examples.txt'
 end
 
