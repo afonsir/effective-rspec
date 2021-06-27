@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# rspec --profile 2 -> 2 slowest test
-
 RSpec.describe 'The sleep() method' do
   it('can sleep for 0.1 second1') { sleep 0.1 }
   it('can sleep for 0.2 second1') { sleep 0.2 }
